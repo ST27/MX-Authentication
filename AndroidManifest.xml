@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ma.m2m.mx"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+
+    <uses-sdk android:minSdkVersion="7"  
+  android:targetSdkVersion="7" 
+  android:maxSdkVersion="10" />
+
+    
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <application
+        android:icon="@drawable/unklog"
+        android:label="@string/app_name" 
+        android:theme="@android:style/Theme.Black" >
+         <activity android:name=".preActivity"
+            android:label="@string/app_name2" >
+        </activity>
+        <activity
+            android:name=".MXauthenticationActivity"
+            android:label="@string/app_name2" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MenuActivity"
+            android:label="@string/app_name2" >
+        </activity>
+           <activity android:name=".HotpActivity"
+            android:label="@string/app_name2" >
+        </activity>
+          <activity android:name="ma.unk.mx.CR2Activity"
+            android:label="@string/app_name2" >
+        </activity>
+    </application>
+
+</manifest>

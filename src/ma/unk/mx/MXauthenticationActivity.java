@@ -1,0 +1,244 @@
+
+package ma.unk.mx;
+
+import ma.unk.mx.R;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+public class MXauthenticationActivity extends Activity implements OnClickListener {
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.menu);
+		Button c = (Button) findViewById(R.id.TOTP);
+		c.setOnClickListener(this);
+		Button d = (Button) findViewById(R.id.HOTP);
+		d.setOnClickListener(this);
+		Button K = (Button) findViewById(R.id.CR);
+		K.setOnClickListener(this);
+	}
+	
+	
+	//MX-Authentication
+	/*@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		
+		LayoutInflater factory = LayoutInflater.from(this);
+		 final View alertDialogView = factory.inflate(R.layout.alertdialog, null);
+
+		 
+	        //Création de l'AlertDialog
+	        AlertDialog.Builder adb = new AlertDialog.Builder(this);
+	 
+	        //On affecte la vue personnalisé que l'on a crée à notre AlertDialog
+	        adb.setView(alertDialogView);
+	 
+	        //On donne un titre à l'AlertDialog
+	        adb.setTitle("Close Application");
+	 
+	        //On modifie l'icône de l'AlertDialog pour le fun ;)
+	        adb.setIcon(android.R.drawable.ic_dialog_alert);
+	 
+	        //On affecte un bouton "OK" à notre AlertDialog et on lui affecte un évènement
+	       
+	        adb.setNegativeButton("YES", new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	            	//Lorsque l'on cliquera sur annuler on quittera l'application
+	            	finish();
+	          } });
+	        adb.setPositiveButton("NON", new DialogInterface.OnClickListener(){
+
+				public void onClick(DialogInterface dialog, int which) {
+					// TODO Auto-generated method stub
+					
+				} });
+	        	
+
+adb.show();
+		super.onDestroy();
+	}*/
+/*
+	protected void onPause() {
+		LayoutInflater factory = LayoutInflater.from(this);
+		 final View alertDialogView = factory.inflate(R.layout.alertdialog, null);
+
+		 
+	        //Création de l'AlertDialog
+	        AlertDialog.Builder adb = new AlertDialog.Builder(this);
+	 
+	        //On affecte la vue personnalisé que l'on a crée à notre AlertDialog
+	        adb.setView(alertDialogView);
+	 
+	        //On donne un titre à l'AlertDialog
+	        adb.setTitle("Close Application");
+	 
+	        //On modifie l'icône de l'AlertDialog pour le fun ;)
+	        adb.setIcon(android.R.drawable.ic_dialog_alert);
+	 
+	        //On affecte un bouton "OK" à notre AlertDialog et on lui affecte un évènement
+	       
+	        adb.setNegativeButton("YES", new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	            	//Lorsque l'on cliquera sur annuler on quittera l'application
+	            	finish();
+	          } });
+	        adb.setPositiveButton("NON", new DialogInterface.OnClickListener(){
+
+				public void onClick(DialogInterface dialog, int which) {
+					// TODO Auto-generated method stub
+					
+				} });
+	        	
+
+adb.show();
+	        this.onPause();
+	        
+	}  */
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	    if (keyCode == KeyEvent.KEYCODE_HOME) {
+	
+	        return true;
+	    }
+    	LayoutInflater factory = LayoutInflater.from(this);
+			 final View alertDialogView = factory.inflate(R.layout.alertdialog, null);
+
+			 
+		        //Création de l'AlertDialog
+		        AlertDialog.Builder adb = new AlertDialog.Builder(this);
+		 
+		        //On affecte la vue personnalisé que l'on a crée à notre AlertDialog
+		        adb.setView(alertDialogView);
+		 
+		        //On donne un titre à l'AlertDialog
+		        adb.setTitle("Close Application");
+		 
+		        //On modifie l'icône de l'AlertDialog pour le fun ;)
+		        adb.setIcon(android.R.drawable.ic_dialog_alert);
+		 
+		        //On affecte un bouton "OK" à notre AlertDialog et on lui affecte un évènement
+		       
+		        adb.setPositiveButton("OUI", new DialogInterface.OnClickListener(){
+
+					public void onClick(DialogInterface dialog, int which) {
+						// TODO Auto-generated method stub
+						finish();
+					} });
+		        adb.setNegativeButton("NON", new DialogInterface.OnClickListener() {
+		            public void onClick(DialogInterface dialog, int which) {
+		            	//Lorsque l'on cliquera sur annuler on quittera l'application
+		            	
+		          } });
+
+		        adb.show();
+	    return super.onKeyDown(keyCode, event);    
+	}
+	
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		
+		LayoutInflater factory = LayoutInflater.from(this);
+		 final View alertDialogView = factory.inflate(R.layout.alertdialog, null);
+
+		 
+	        //Création de l'AlertDialog
+	        AlertDialog.Builder adb = new AlertDialog.Builder(this);
+	 
+	        //On affecte la vue personnalisé que l'on a crée à notre AlertDialog
+	        adb.setView(alertDialogView);
+	 
+	        //On donne un titre à l'AlertDialog
+	        adb.setTitle("Close Application");
+	 
+	        //On modifie l'icône de l'AlertDialog pour le fun ;)
+	        adb.setIcon(android.R.drawable.ic_dialog_alert);
+	 
+	        //On affecte un bouton "OK" à notre AlertDialog et on lui affecte un évènement
+	       
+	        adb.setPositiveButton("OUI", new DialogInterface.OnClickListener(){
+
+				public void onClick(DialogInterface dialog, int which) {
+					// TODO Auto-generated method stub
+					finish();
+				} });
+	        adb.setNegativeButton("NON", new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	            	//Lorsque l'on cliquera sur annuler on quittera l'application
+	            	
+	          } });
+
+	        adb.show();
+	//	super.onBackPressed();
+	}
+	
+	
+	
+	/*protected void onUserLeaveHint() {
+		// TODO Auto-generated method stub
+		LayoutInflater factory = LayoutInflater.from(this);
+		 final View alertDialogView = factory.inflate(R.layout.alertdialog, null);
+
+		 
+	        //Création de l'AlertDialog
+	        AlertDialog.Builder adb = new AlertDialog.Builder(this);
+	 
+	        //On affecte la vue personnalisé que l'on a crée à notre AlertDialog
+	        adb.setView(alertDialogView);
+	 
+	        //On donne un titre à l'AlertDialog
+	        adb.setTitle("Close Application");
+	 
+	        //On modifie l'icône de l'AlertDialog pour le fun ;)
+	        adb.setIcon(android.R.drawable.ic_dialog_alert);
+	 
+	        //On affecte un bouton "OK" à notre AlertDialog et on lui affecte un évènement
+	       
+	        adb.setNegativeButton("YES", new DialogInterface.OnClickListener() {
+	            public void onClick(DialogInterface dialog, int which) {
+	            	//Lorsque l'on cliquera sur annuler on quittera l'application
+	            	finish();
+	          } });
+	        adb.setPositiveButton("NON", new DialogInterface.OnClickListener(){
+
+				public void onClick(DialogInterface dialog, int which) {
+					// TODO Auto-generated method stub
+					
+				} });
+	        	
+
+adb.show();
+		this.onUserLeaveHint();
+	}
+	       */
+	
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		if(v.getId()==R.id.TOTP)
+		{
+			startActivity(new Intent(MXauthenticationActivity.this, MenuActivity.class));
+		}
+		if(v.getId()==R.id.HOTP)
+		{
+			startActivity(new Intent(MXauthenticationActivity.this, HotpActivity.class));
+		}	
+		if(v.getId()==R.id.CR)
+		{
+			startActivity(new Intent(MXauthenticationActivity.this, CR2Activity.class));
+		}
+	}
+	
+	
+
+}
